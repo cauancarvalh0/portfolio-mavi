@@ -1,0 +1,186 @@
+/* Portfólio Maria Vitória: camada do projeto sobre brex.css e bootstrap-overrides.css.
+   Regras do Brex Design System: só tokens, sem sombras, raios 12px/6px, Ember só em ação primária. */
+
+/* Vídeo de fundo (aparece só quando existe video/fundo.mp4) */
+.video-fundo { position: fixed; inset: 0; z-index: -1; opacity: 0; transition: opacity .6s ease-out; pointer-events: none; }
+.video-fundo.ativo { opacity: 1; }
+.video-fundo video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.video-fundo::after { content: ""; position: absolute; inset: 0; background: rgba(255, 255, 255, 0.9); }
+
+/* Faixas Fog continuam translúcidas para deixar o vídeo aparecer */
+.section--fog { background: rgba(243, 243, 247, 0.92); }
+
+/* Topo */
+.topo { background: var(--color-paper); border-bottom: 1px solid transparent; transition: border-color .2s ease-out; z-index: 1030; }
+.topo.rolou { border-bottom-color: var(--color-mist); }
+
+/* Ícones de traço */
+svg.icone, svg.icone-grande { fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+svg.icone { width: 16px; height: 16px; }
+svg.icone-grande { width: 40px; height: 40px; color: var(--color-steel); }
+
+/* Hero */
+.hero { padding-top: 48px; }
+.hero-visual { display: grid; gap: 16px; }
+.hero .tag { align-self: flex-start; }
+.hero-visual .foto-slot--retrato { aspect-ratio: 4 / 3; }
+.preencher { color: var(--color-pewter); }
+
+/* Espaços de foto: trocam sozinhos pela imagem quando o arquivo existe */
+.foto-slot { position: relative; width: 100%; display: grid; place-content: center; justify-items: center; gap: 8px; text-align: center;
+  background: var(--color-fog); border: 1px solid var(--color-mist); border-radius: var(--radius-cards); overflow: hidden; padding: 24px; }
+.foto-slot--retrato { aspect-ratio: 4 / 5; }
+.foto-slot--16x9 { aspect-ratio: 16 / 9; }
+.slot-titulo { font-size: var(--text-body-sm); font-weight: var(--font-weight-medium); color: var(--color-ink); }
+.slot-arquivo { font-size: var(--text-caption); color: var(--color-pewter); }
+.foto-slot img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+.foto-slot.tem-foto { padding: 0; border-color: transparent; }
+.foto-slot.tem-foto > :not(img) { display: none; }
+.article-card .foto-slot { border: 0; border-radius: 0; }
+.section--fog .article-card { border: 0; }
+
+/* Instrumentos animados (ilustrações planas, só paleta do sistema) */
+.instrumento { background: var(--color-fog); border: 1px solid var(--color-mist); border-radius: var(--radius-cards); overflow: hidden; }
+.instrumento svg { display: block; width: 100%; height: auto; }
+.instrumento--card { height: 200px; display: flex; align-items: center; justify-content: center; border: 0; background: var(--color-fog); margin-bottom: 8px; }
+.instrumento--card svg { height: 100%; width: auto; max-width: 100%; }
+.hero .instrumento { aspect-ratio: 10 / 3; }
+
+.grade-linha { fill: none; stroke: var(--color-mist); stroke-width: 1; opacity: .6; }
+.ecg-base { fill: none; stroke: var(--color-mist); stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+.ecg-pulso { fill: none; stroke: var(--color-ink); stroke-width: 3; stroke-linejoin: round; stroke-linecap: round;
+  stroke-dasharray: 140 var(--len, 1200); stroke-dashoffset: 140; animation: ecg 3.6s linear infinite; }
+@keyframes ecg { to { stroke-dashoffset: calc(-1 * var(--len, 1200)); } }
+
+.eixo { stroke: var(--color-mist); stroke-width: 2; }
+.barra { fill: var(--color-mist); transform-box: fill-box; transform-origin: bottom; animation: cresce 7s ease-out infinite; animation-delay: calc(var(--i) * .12s); }
+.barra--alvo { fill: var(--color-ink); }
+.tendencia { fill: none; stroke: var(--color-steel); stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;
+  stroke-dasharray: 400; stroke-dashoffset: 400; animation: traca 7s ease-out infinite .5s; }
+@keyframes cresce { 0% { transform: scaleY(0); opacity: 1; } 18% { transform: scaleY(1); } 90% { transform: scaleY(1); opacity: 1; } 100% { transform: scaleY(1); opacity: 0; } }
+@keyframes traca { 0%, 15% { stroke-dashoffset: 400; opacity: 1; } 40% { stroke-dashoffset: 0; } 90% { stroke-dashoffset: 0; opacity: 1; } 100% { stroke-dashoffset: 0; opacity: 0; } }
+
+.dna-linha { stroke: var(--color-mist); stroke-width: 2; stroke-linecap: round; }
+.dna-a { fill: var(--color-ink); }
+.dna-b { fill: var(--color-steel); }
+
+/* Método: trilho que avança e acende cada passo */
+.metodo-trilho { position: relative; height: 2px; background: var(--color-mist); }
+.metodo-progresso { position: absolute; inset: 0; background: var(--color-ink); transform-origin: left; transform: scaleX(0); animation: trilho 6.4s linear infinite; }
+@keyframes trilho { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+.passo { transition: border-color .3s ease-out; }
+.passo.ativo { border-color: var(--color-ink); }
+.passo.ativo .tag { background: var(--color-ink); color: var(--color-paper); }
+
+/* Tags sobre Fog ganham fundo Paper para continuar visíveis */
+.section--fog .tag { background: var(--color-paper); border: 1px solid var(--color-mist); }
+
+/* Cartões e formulário */
+.card > .tag { align-self: flex-start; }
+form.card { display: grid; gap: 16px; }
+form.card > * + * { margin-top: 0; }
+.was-validated .form-control:invalid { border: 2px solid var(--color-ink); }
+.invalid-feedback { color: var(--color-ink); font-size: var(--text-body-sm); }
+
+/* Rodapé */
+.rodape-marca { font-size: var(--text-heading-sm); font-weight: var(--font-weight-semibold); color: var(--color-paper); margin-bottom: 8px; }
+.rodape-texto { font-size: var(--text-body-sm); color: var(--color-mist); }
+.rodape-copy { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--color-graphite); font-size: var(--text-caption); color: var(--color-mist); max-width: none; }
+
+/* Animações de entrada (só com JS) */
+.js .reveal { opacity: 0; transform: translateY(16px); transition: opacity .4s ease-out, transform .4s ease-out; }
+.js .reveal.in { opacity: 1; transform: none; }
+
+@media (max-width: 900px) { .hero .instrumento { aspect-ratio: 10 / 4; } .hero--escuro .instrumento--escuro { aspect-ratio: auto; } }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+  .ecg-pulso, .barra, .tendencia, .metodo-progresso { animation: none; }
+  .ecg-pulso { stroke-dasharray: none; stroke-dashoffset: 0; }
+  .barra { transform: none; }
+  .tendencia { stroke-dashoffset: 0; }
+  .metodo-progresso { transform: scaleX(1); }
+}
+
+/* ===== Dois lados: biomédico e administrativo ===== */
+body[data-lado="bio"] [data-so="adm"], body[data-lado="adm"] [data-so="bio"] { display: none !important; }
+.announce [data-so] { display: inline; }
+
+/* Alternador do lado (grupo de botões: 12px no conjunto, sem raios internos) */
+.nav-acoes { display: flex; align-items: center; gap: var(--spacing-16); flex-wrap: wrap; }
+.alterna { display: inline-flex; border: 1px solid var(--color-mist); border-radius: var(--radius-buttons); overflow: hidden; background: var(--color-paper); }
+.alterna button { border: 0; background: transparent; color: var(--color-ink); font: inherit; font-size: var(--text-body-sm); font-weight: var(--font-weight-medium); padding: 8px 16px; cursor: pointer; transition: background .2s ease-out, color .2s ease-out; }
+.alterna button + button { border-left: 1px solid var(--color-mist); }
+.alterna button[aria-pressed="true"] { background: var(--color-ink); color: var(--color-paper); }
+.alterna button:not([aria-pressed="true"]):hover { background: var(--color-fog); }
+.alterna button:focus-visible { outline: 2px solid var(--color-ink); outline-offset: -4px; }
+.alterna button[aria-pressed="true"]:focus-visible { outline-color: var(--color-paper); }
+
+/* Convite para o outro lado */
+.convite { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: var(--spacing-16); border: 1px solid var(--color-mist); border-radius: var(--radius-cards); padding: var(--spacing-16) var(--spacing-24); }
+.convite p { margin: 0; max-width: 34ch; color: var(--color-graphite); }
+.convite .btn { white-space: nowrap; }
+.link-botao { background: none; border: 0; padding: 0; font: inherit; font-size: var(--text-body-sm); font-weight: var(--font-weight-medium); cursor: pointer; }
+
+/* Herói administrativo: faixa Abyss full-bleed (moldura escura do sistema) */
+.hero--escuro { padding-bottom: var(--section-gap); }
+.hero--escuro .t-display { color: var(--color-paper); }
+.hero--escuro .t-subheading { color: var(--color-mist); }
+.hero--escuro .tag { background: transparent; border: 1px solid var(--color-graphite); color: var(--color-paper); }
+.hero--escuro .link-ghost, .hero--escuro .link-botao { color: var(--color-paper); }
+.hero--escuro .convite { border-color: var(--color-graphite); }
+.hero--escuro .convite p { color: var(--color-mist); }
+.hero--escuro .convite strong { color: var(--color-paper); }
+.hero--escuro .btn-outline-secondary { background: transparent; border: 1px solid var(--color-graphite); color: var(--color-paper); }
+.hero--escuro .btn-outline-secondary:hover { background: var(--color-graphite); color: var(--color-paper); }
+.hero--escuro .foto-slot { background: transparent; border-color: var(--color-graphite); }
+.hero--escuro .foto-slot .slot-titulo { color: var(--color-paper); }
+.hero--escuro .foto-slot .slot-arquivo { color: var(--color-mist); }
+.hero--escuro .foto-slot.tem-foto { border-color: transparent; }
+.hero--escuro .foto-slot--retrato { aspect-ratio: 16 / 9; }
+.hero--escuro .instrumento--escuro { display: flex; justify-content: center; padding: var(--spacing-8) 0; aspect-ratio: auto; }
+.hero--escuro .instrumento--escuro svg { height: 240px; width: auto; max-width: 100%; }
+.instrumento--escuro { background: transparent; border: 1px solid var(--color-graphite); }
+
+/* Quadro de tarefas animado */
+.k-col rect { fill: none; stroke: var(--color-graphite); stroke-width: 1; }
+.k-col text { fill: var(--color-mist); font-size: 12px; font-weight: 500; }
+.kcard { transition: transform .7s cubic-bezier(.2, .7, .2, 1), opacity .4s ease-out; }
+.kcard rect:first-child { fill: var(--color-paper); }
+.kcard .kl { fill: var(--color-mist); }
+.kcard .ck { fill: none; stroke: var(--color-ink); stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; opacity: 0; transition: opacity .3s ease-out .5s; }
+.kcard.feito .ck { opacity: 1; }
+
+/* Organograma animado */
+.fluxo { fill: none; stroke: var(--color-steel); stroke-width: 2; stroke-dasharray: 4 6; animation: flui 1.2s linear infinite; }
+@keyframes flui { to { stroke-dashoffset: -20; } }
+.no { fill: var(--color-paper); stroke: var(--color-mist); stroke-width: 2; }
+.no--vez { animation: acende 6s ease-in-out infinite; animation-delay: calc(var(--i) * 2s); }
+@keyframes acende { 0%, 100% { stroke: var(--color-mist); } 10%, 28% { stroke: var(--color-ink); } 40% { stroke: var(--color-mist); } }
+.barra-no { fill: var(--color-mist); }
+
+/* Lista de tarefas animada */
+.planner ul { list-style: none; margin: 0; padding: 24px 32px; width: 100%; }
+.planner li { display: flex; align-items: center; gap: 12px; margin: 0 0 16px; }
+.planner li:last-child { margin-bottom: 0; }
+.caixa { position: relative; width: 20px; height: 20px; border: 2px solid var(--color-steel); border-radius: var(--radius-tags); flex: none; background: var(--color-paper); }
+.caixa::after { content: ""; position: absolute; inset: 2px; background: var(--color-ink); border-radius: 0; transform: scale(0); animation: marca 8s ease-out infinite; animation-delay: calc(var(--i) * .9s); }
+@keyframes marca { 0% { transform: scale(0); } 8%, 78% { transform: scale(1); } 90%, 100% { transform: scale(0); } }
+.linha-t { display: block; height: 8px; background: var(--color-mist); border-radius: var(--radius-tags); }
+.lista-simples { list-style: none; padding: 0; margin: 0; }
+.lista-simples li { padding: 8px 0; border-bottom: 1px solid var(--color-mist); font-size: var(--text-body-sm); color: var(--color-graphite); }
+.lista-simples li:last-child { border-bottom: 0; }
+
+/* Transição entre os lados: faixa Abyss que sobe e sai */
+.transicao { position: fixed; inset: 0; z-index: 2000; background: var(--color-abyss); color: var(--color-paper); display: grid; place-items: center; transform: translateY(100%); pointer-events: none; visibility: hidden; }
+.transicao span { font-size: var(--text-heading-sm); font-weight: var(--font-weight-semibold); letter-spacing: -0.01em; opacity: 0; transition: opacity .25s ease-out; }
+.transicao.entra { visibility: visible; transform: none; transition: transform .5s cubic-bezier(.7, 0, .2, 1); pointer-events: auto; }
+.transicao.entra span { opacity: 1; }
+.transicao.sai { visibility: visible; transform: translateY(-100%); transition: transform .5s cubic-bezier(.7, 0, .2, 1); }
+
+@media (max-width: 991px) { .nav-acoes { margin-top: var(--spacing-16); } .alterna button { padding: 8px 12px; } }
+@media (prefers-reduced-motion: reduce) {
+  .kcard, .kcard .ck, .transicao, .transicao span { transition: none; }
+  .fluxo, .no--vez, .caixa::after { animation: none; }
+  .caixa::after { transform: scale(1); }
+}

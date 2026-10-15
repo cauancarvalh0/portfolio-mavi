@@ -1,0 +1,11 @@
+FOTOS DA MARIA VITÓRIA
+
+Coloque as fotos nesta pasta com EXATAMENTE estes nomes (JPG). Elas entram sozinhas no lugar dos espaços reservados:
+
+  maria-perfil.jpg   foto principal do início (formato vertical, proporção 4:5)
+  maria-sobre.jpg    foto da seção "Sobre mim" (vertical, 4:5)
+  momento-1.jpg      seção "Momentos" (horizontal, 16:9)
+  momento-2.jpg      seção "Momentos" (horizontal, 16:9)
+  momento-3.jpg      seção "Momentos" (horizontal, 16:9)
+
+Dica: fotos claras, com boa luz e fundo limpo combinam com o design. Tamanho ideal: até 300 KB cada.

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maria Vitória | Portfólio Profissional</title>
+  <meta name="description" content="Portfólio profissional de Maria Vitória, estudante de Biomedicina e Técnica em Administração.">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:title" content="Maria Vitória | Portfólio Profissional">
+  <meta property="og:description" content="Estudante de Biomedicina e Técnica em Administração.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/brex.css" rel="stylesheet">
+  <link href="css/bootstrap-overrides.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body data-lado="bio" data-bs-spy="scroll" data-bs-target="#menu" data-bs-offset="96" tabindex="0">
+
+<!-- Vídeo de fundo: video/fundo.mp4 (lado biomédico) e video/fundo-adm.mp4 (lado administrativo). Veja LEIA-ME.txt -->
+<div class="video-fundo" aria-hidden="true">
+  <video id="video-fundo" muted loop playsinline preload="metadata"></video>
+</div>
+
+<!-- Ícones de traço (Steel) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-pessoa" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-3.9 3.1-7 7-7s7 3.1 7 7"/></symbol>
+  <symbol id="i-conversa" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></symbol>
+  <symbol id="i-equipe" viewBox="0 0 24 24"><circle cx="8" cy="9" r="2.8"/><circle cx="16.5" cy="9.5" r="2.3"/><path d="M2.5 19c0-3 2.5-5.3 5.5-5.3s5.5 2.3 5.5 5.3M14.5 14.3c3-.6 6 1.4 6 4.7"/></symbol>
+  <symbol id="i-solucao" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 8h3l1.5-2h7L17 8h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></symbol>
+  <symbol id="i-agenda" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="3"/><path d="M4 10h16M9 3v4M15 3v4"/></symbol>
+  <symbol id="i-troca" viewBox="0 0 24 24"><path d="M5 8h13l-3-3M19 16H6l3 3"/></symbol>
+  <symbol id="i-seta" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+</svg>
+
+<div class="announce">
+  <span data-so="bio">Portfólio profissional de Maria Vitória. <a href="#" data-ir="adm">Ver meu lado administrativo</a></span>
+  <span data-so="adm">Lado administrativo de Maria Vitória. <a href="#" data-ir="bio">Ver meu lado biomédico</a></span>
+</div>
+
+<header class="navbar navbar-expand-lg sticky-top topo">
+  <div class="container">
+    <a class="navbar-brand" href="#inicio">Maria Vitória</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <nav class="collapse navbar-collapse" id="menu" aria-label="Principal">
+      <ul class="navbar-nav mx-lg-auto" data-so="bio">
+        <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+        <li class="nav-item"><a class="nav-link" href="#formacao">Formação</a></li>
+        <li class="nav-item"><a class="nav-link" href="#metodo">Método</a></li>
+        <li class="nav-item"><a class="nav-link" href="#momentos">Momentos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+      </ul>
+      <ul class="navbar-nav mx-lg-auto" data-so="adm">
+        <li class="nav-item"><a class="nav-link" href="#adm-sobre">Sobre</a></li>
+        <li class="nav-item"><a class="nav-link" href="#adm-formacao">Formação</a></li>
+        <li class="nav-item"><a class="nav-link" href="#adm-metodo">Método</a></li>
+        <li class="nav-item"><a class="nav-link" href="#adm-momentos">Momentos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+      </ul>
+      <div class="nav-acoes">
+        <div class="alterna" role="group" aria-label="Escolher o lado do portfólio">
+          <button type="button" data-ir="bio" aria-pressed="true">Biomedicina</button>
+          <button type="button" data-ir="adm" aria-pressed="false">Administração</button>
+        </div>
+        <a class="btn btn-primary" href="#contato">Entrar em contato</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div id="lado-bio" class="lado" data-so="bio">
+  <!-- Início -->
+  <section id="inicio" class="section hero">
+    <div class="container hero-split">
+      <div class="stack-24">
+        <span class="tag">Biomedicina e Administração</span>
+        <h1 class="t-display">Saúde e gestão, com método e cuidado.</h1>
+        <p class="t-subheading">Estudante de Biomedicina e Técnica em Administração, em busca de desenvolver minhas habilidades profissionais e adquirir novos conhecimentos.</p>
+        <div class="d-flex flex-wrap align-items-center gap-3">
+          <a class="btn btn-primary btn--lg" href="#contato">Entrar em contato</a>
+          <a class="link-ghost" href="#formacao"><svg class="icone" aria-hidden="true"><use href="#i-seta"/></svg>Ver formação</a>
+        </div>
+        <div class="convite">
+          <p class="t-body-sm"><strong class="fw-600">Quer conhecer meu outro lado?</strong> Veja como eu organizo a rotina na administração.</p>
+          <button type="button" class="btn btn-outline-secondary" data-ir="adm"><svg class="icone" aria-hidden="true"><use href="#i-troca"/></svg>Ver meu lado administrativo</button>
+        </div>
+      </div>
+      <div class="hero-visual reveal">
+        <div class="foto-slot foto-slot--retrato" data-foto="img/maria-perfil.jpg" data-rotulo="Sua foto de perfil">
+          <svg class="icone-grande" aria-hidden="true"><use href="#i-pessoa"/></svg>
+          <span class="slot-titulo">Sua foto aqui</span><span class="slot-arquivo">img/maria-perfil.jpg</span>
+        </div>
+        <div class="instrumento" role="img" aria-label="Animação de batimento cardíaco">
+          <svg viewBox="0 0 400 120" preserveAspectRatio="none">
+            <defs><pattern id="grade" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" class="grade-linha"/></pattern></defs>
+            <rect width="400" height="120" fill="url(#grade)"/>
+            <path class="ecg-base" d="M0 66H40L48 58L56 66H84L90 74L98 8L106 100L112 66H140L152 44L164 66H230L238 58L246 66H274L280 74L288 8L296 100L302 66H330L342 44L354 66H400"/>
+            <path class="ecg-pulso" d="M0 66H40L48 58L56 66H84L90 74L98 8L106 100L112 66H140L152 44L164 66H230L238 58L246 66H274L280 74L288 8L296 100L302 66H330L342 44L354 66H400"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Qualidades -->
+  <section class="section section--fog" id="qualidades">
+    <div class="container">
+      <div class="center reveal"><h2 class="t-heading">Como eu trabalho com as pessoas</h2></div>
+      <div class="row g-4 mt-4">
+        <div class="col-md-6 col-lg-3 reveal"><article class="card border-0 h-100">
+          <svg class="icone-grande" aria-hidden="true"><use href="#i-pessoa"/></svg>
+          <h3 class="t-subheading fw-600">Organização</h3>
+          <p class="t-body-sm">Responsabilidade e dedicação para cumprir o que foi combinado.</p></article></div>
+        <div class="col-md-6 col-lg-3 reveal"><article class="card border-0 h-100">
+          <svg class="icone-grande" aria-hidden="true"><use href="#i-conversa"/></svg>
+          <h3 class="t-subheading fw-600">Comunicação</h3>
+          <p class="t-body-sm">Facilidade para conversar, ouvir e agir com empatia.</p></article></div>
+        <div class="col-md-6 col-lg-3 reveal"><article class="card border-0 h-100">
+          <svg class="icone-grande" aria-hidden="true"><use href="#i-equipe"/></svg>
+          <h3 class="t-subheading fw-600">Trabalho em equipe</h3>
+          <p class="t-body-sm">Gosto de somar com as pessoas e aprender junto.</p></article></div>
+        <div class="col-md-6 col-lg-3 reveal"><article class="card border-0 h-100">
+          <svg class="icone-grande" aria-hidden="true"><use href="#i-solucao"/></svg>
+          <h3 class="t-subheading fw-600">Solução de problemas</h3>
+          <p class="t-body-sm">Iniciativa para buscar soluções e capacidade de adaptação.</p></article></div>
+      </div>
+      <div class="d-flex flex-wrap justify-content-center gap-2 mt-4 reveal">
+        <span class="tag">Responsável</span><span class="tag">Dedicada</span><span class="tag">Iniciativa</span><span class="tag">Adaptação</span><span class="tag">Empatia</span><span class="tag">Comprometimento</span><span class="tag">Aprendizado contínuo</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre -->
+  <section id="sobre" class="section">
+    <div class="container">
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-5 reveal">
+          <div class="foto-slot foto-slot--retrato" data-foto="img/maria-sobre.jpg" data-rotulo="Foto da seção Sobre">
+            <svg class="icone-grande" aria-hidden="true"><use href="#i-camera"/></svg>
+            <span class="slot-titulo">Sua foto aqui</span><span class="slot-arquivo">img/maria-sobre.jpg</span>
+          </div>
+        </div>
+        <div class="col-lg-7 stack-24 reveal">
+          <h2 class="t-heading-lg">Sobre mim</h2>
+          <p class="t-subheading">Sou uma pessoa responsável, organizada, comunicativa e dedicada, com facilidade para trabalhar em equipe, aprender coisas novas e buscar soluções para problemas.</p>
+          <p>Tenho iniciativa, boa capacidade de adaptação, empatia e comprometimento com minhas responsabilidades.</p>
+          <p>Sou estudante de Biomedicina e Técnica em Administração, com interesse em desenvolver minhas habilidades profissionais e adquirir novos conhecimentos.</p>
+          <div><a class="btn btn-outline-secondary" href="#contato">Vamos conversar</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formação -->
+  <section id="formacao" class="section section--fog">
+    <div class="container">
+      <div class="reveal stack-16">
+        <h2 class="t-heading-lg">Formação</h2>
+        <p>Duas áreas que se completam: o rigor da ciência e a organização da gestão.</p>
+      </div>
+      <div class="row g-4 mt-4">
+        <div class="col-lg-6 reveal">
+          <article class="card border-0 h-100">
+            <div class="instrumento instrumento--card" role="img" aria-label="Animação de uma dupla hélice de DNA"><svg id="dna" viewBox="0 0 160 200"></svg></div>
+            <div class="d-flex align-items-center gap-2"><h3 class="t-heading-sm">Biomedicina</h3><span class="tag">Estudante</span></div>
+            <p class="t-body-sm preencher">Nome da instituição · Período</p>
+            <p>Base científica, atenção aos detalhes e responsabilidade com a saúde das pessoas.</p>
+          </article>
+        </div>
+        <div class="col-lg-6 reveal">
+          <article class="card border-0 h-100">
+            <div class="instrumento instrumento--card" role="img" aria-label="Animação de um gráfico de barras crescendo">
+              <svg viewBox="0 0 320 200" preserveAspectRatio="xMidYMid meet">
+                <line class="eixo" x1="16" y1="170" x2="304" y2="170"/>
+                <rect class="barra" x="28" y="120" width="30" height="50" rx="6" style="--i:0"/>
+                <rect class="barra" x="72" y="90" width="30" height="80" rx="6" style="--i:1"/>
+                <rect class="barra" x="116" y="106" width="30" height="64" rx="6" style="--i:2"/>
+                <rect class="barra" x="160" y="60" width="30" height="110" rx="6" style="--i:3"/>
+                <rect class="barra" x="204" y="80" width="30" height="90" rx="6" style="--i:4"/>
+                <rect class="barra barra--alvo" x="248" y="30" width="30" height="140" rx="6" style="--i:5"/>
+                <polyline class="tendencia" points="43,112 87,82 131,98 175,52 219,72 263,22"/>
+              </svg>
+            </div>
+            <div class="d-flex align-items-center gap-2"><h3 class="t-heading-sm">Técnica em Administração</h3><span class="tag">Estudante</span></div>
+            <p class="t-body-sm preencher">Nome da instituição · Período</p>
+            <p>Organização, planejamento e processos que fazem o trabalho acontecer.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Método -->
+  <section id="metodo" class="section">
+    <div class="container">
+      <div class="reveal stack-16">
+        <h2 class="t-heading-lg">Meu método</h2>
+        <p>Tanto no laboratório quanto na rotina administrativa, o caminho é parecido: entender, organizar, executar e conferir.</p>
+      </div>
+      <div class="metodo-trilho mt-4" aria-hidden="true"><span class="metodo-progresso"></span></div>
+      <div class="row g-4 mt-1" id="passos">
+        <div class="col-md-6 col-lg-3 reveal"><article class="card h-100 passo"><span class="tag">01</span><h3 class="t-subheading fw-600">Observar</h3><p class="t-body-sm">Entender o contexto, as pessoas envolvidas e o que realmente precisa ser feito.</p></article></div>
+        <div class="col-md-6 col-lg-3 reveal"><article class="card h-100 passo"><span class="tag">02</span><h3 class="t-subheading fw-600">Organizar</h3><p class="t-body-sm">Planejar etapas, prazos e responsabilidades antes de começar.</p></article></div>
+        <div class="col-md-6 col-lg-3 reveal"><article class="card h-100 passo"><span class="tag">03</span><h3 class="t-subheading fw-600">Executar</h3><p class="t-body-sm">Fazer com atenção aos detalhes e comprometimento com o combinado.</p></article></div>
+        <div class="col-md-6 col-lg-3 reveal"><article class="card h-100 passo"><span class="tag">04</span><h3 class="t-subheading fw-600">Conferir</h3><p class="t-body-sm">Revisar o resultado, aprender com ele e buscar melhorar na próxima vez.</p></article></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Momentos -->
+  <section id="momentos" class="section section--fog">
+    <div class="container">
+      <div class="reveal stack-16">
+        <h2 class="t-heading-lg">Momentos</h2>
+        <p>Espaço para registros da sua trajetória: estudos, estágios, eventos e projetos.</p>
+      </div>
+      <div class="row g-4 mt-4">
+        <div class="col-md-4 reveal"><article class="article-card">
+          <div class="foto-slot foto-slot--16x9" data-foto="img/momento-1.jpg" data-rotulo="Momento 1"><svg class="icone-grande" aria-hidden="true"><use href="#i-camera"/></svg><span class="slot-titulo">Sua foto aqui</span><span class="slot-arquivo">img/momento-1.jpg</span></div>
+          <div class="article-card__body"><h3 class="t-subheading fw-600">Título do momento</h3><p>Descreva a foto em uma ou duas frases.</p></div></article></div>
+        <div class="col-md-4 reveal"><article class="article-card">
+          <div class="foto-slot foto-slot--16x9" data-foto="img/momento-2.jpg" data-rotulo="Momento 2"><svg class="icone-grande" aria-hidden="true"><use href="#i-camera"/></svg><span class="slot-titulo">Sua foto aqui</span><span class="slot-arquivo">img/momento-2.jpg</span></div>
+          <div class="article-card__body"><h3 class="t-subheading fw-600">Título do momento</h3><p>Descreva a foto em uma ou duas frases.</p></div></article></div>
+        <div class="col-md-4 reveal"><article class="article-card">
+          <div class="foto-slot foto-slot--16x9" data-foto="img/momento-3.jpg" data-rotulo="Momento 3"><svg class="icone-grande" aria-hidden="true"><use href="#i-camera"/></svg><span class="slot-titulo">Sua foto aqui</span><span class="slot-arquivo">img/momento-3.jpg</span></div>
+          <div class="article-card__body"><h3 class="t-subheading fw-600">Título do momento</h3><p>Descreva a foto em uma ou duas frases.</p></div></article></div>
+      </div>
+    </div>
+  </section>
+  </div>
+
+  <!-- ===== LADO ADMINISTRATIVO ===== -->
+  <div id="lado-adm" class="lado" data-so="adm" hidden>
+
+  <section id="adm-inicio" class="section section--abyss hero hero--escuro on-dark">
+    <div class="container hero-split">
+      <div class="stack-24">
+        <span class="tag">Técnica em Administração</span>
+        <h1 class="t-display">Organização que faz a rotina funcionar.</h1>
+        <p class="t-subheading">Sou responsável, organizada e comunicativa, com facilidade para trabalhar em equipe e buscar soluções. Este é o meu lado administrativo.</p>
+        <div class="d-flex flex-wrap align-items-center gap-3">
+          <a class="btn btn-primary btn--lg" href="#contato">Entrar em contato</a>
+          <a class="link-ghost" href="#adm-formacao"><svg class="icone" aria-hidden="true"><use href="#i-seta"/></svg>Ver formação</a>
+        </div>
+        <div class="convite">
+          <p class="t-body-sm"><strong class="fw-600">Quer conhecer meu outro lado?</strong> Veja o meu perfil na biomedicina.</p>
+          <button type="button" class="btn btn-outline-secondary" data-ir="bio"><svg class="icone" aria-hidden="true"><use href="#i-troca"/></svg>Ver meu lado biomédico</button>
+        </div>
+      </div>
+      <div class="hero-visual reveal">
+        <div class="foto-slot foto-slot--retrato" data-foto="img/maria-adm-perfil.jpg" data-rotulo="Sua foto de perfil (lado administrativo)"><svg class="icone-grande" aria-hidden="true"><use href="#i-pessoa"/></svg><span class="slot-titulo">Sua foto aqui</span><span class="slot-arquivo">img/maria-adm-perfil.jpg</span></div>
+        <div class="instrumento instrumento--escuro" role="img" aria-label="Animação de um quadro de tarefas, com cartões passando de A fazer para Concluído">
+          <svg viewBox="0 0 360 230" id="kanban">
+            <g class="k-col">
+              <rect x="8" y="28" width="108" height="194" rx="12"/><rect x="126" y="28" width="108" height="194" rx="12"/><rect x="244" y="28" width="108" height="194" rx="12"/>
+              <text x="14" y="18">A fazer</text><text x="132" y="18">Em andamento</text><text x="250" y="18">Concluído</text>
+            </g>
+            <g class="kcard" data-i="0"><rect width="92" height="38" rx="6"/><rect class="kl" x="8" y="10" width="58" height="5" rx="6"/><rect class="kl" x="8" y="22" width="38" height="5" rx="6"/><path class="ck" d="M68 19l5 5 9-10"/></g>
+            <g class="kcard" data-i="1"><rect width="92" height="38" rx="6"/><rect class="kl" x="8" y="10" width="48" height="5" rx="6"/><rect class="kl" x="8" y="22" width="62" height="5" rx="6"/><path class="ck" d="M68 19l5 5 9-10"/></g>
+            <g class="kcard" data-i="2"><rect width="92" height="38" rx="6"/><rect class="kl" x="8" y="10" width="64" height="5" rx="6"/><rect class="kl" x="8" y="22" width="30" height="5" rx="6"/><path class="ck" d="M68 19l5 5 9-10"/></g>
+            <g class="kcard" data-i="3"><rect width="92" height="38" rx="6"/><rect class="kl" x="8" y="10" width="52" height="5" rx="6"/><rect class="kl" x="8" y="22" width="46" height="5" rx="6"/><path class="ck" d="M68 19l5 5 9-10"/></g>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--fog" id="adm-qualidades">
+    <div class="container">
+      <div class="center reveal"><h2 class="t-heading">Como eu organizo o trabalho</h2></div>
+      <div class="row g-4 mt-4">
+        <div class="col-md-6 col-lg-3 reveal"><article class="card border-0 h-100">
+          <svg class="icone-grande" aria-hidden="true"><use href="#i-agenda"/></svg>
+          <h3 class="t-subheading fw-600">Organização</h3>
+          <p class="t-body-sm">Prazos, tarefas e responsabilidades em ordem, para nada se perder no caminho.</p></article></div>
+        <div class="col-md-6 col-lg-3 reveal"><article class="card border-0 h-100">
+          <svg class="icone-grande" aria-hidden="true"><use href="#i-conversa"/></svg>
+          <h3 class="t-subheading fw-600">Comunicação</h3>
+          <p class="t-body-sm">Clareza para falar e escrever, e empatia para entender o outro lado.</p></article></div>
+        <div class="col-md-6 col-lg-3 reveal"><article class="card border-0 h-100">
+          <svg class="icone-grande" aria-hidden="true"><use href="#i-equipe"/></svg>
+          <h3 class="t-subheading fw-600">Trabalho em equipe</h3>
+          <p class="t-body-sm">Divido tarefas, acompanho o andamento e somo com o grupo.</p></article></div>
+        <div class="col-md-6 col-lg-3 reveal"><article class="card border-0 h-100">
+          <svg class="icone-grande" aria-hidden="true"><use href="#i-solucao"/></svg>
+          <h3 class="t-subheading fw-600">Iniciativa</h3>
+          <p class="t-body-sm">Percebo o que precisa ser feito e busco a solução, com capacidade de adaptação.</p></article></div>
+      </div>
+      <div class="d-flex flex-wrap justify-content-center gap-2 mt-4 reveal">
+        <span class="tag">Responsável</span><span class="tag">Dedicada</span><span class="tag">Comprometimento</span><span class="tag">Adaptação</span><span class="tag">Empatia</span><span class="tag">Aprendizado contínuo</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="adm-sobre" class="section">
+    <div class="container">
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-5 reveal">
+          <div class="foto-slot foto-slot--retrato" data-foto="img/maria-adm-sobre.jpg" data-rotulo="Foto da seção Sobre (lado administrativo)"><svg class="icone-grande" aria-hidden="true"><use href="#i-camera"/></svg><span class="slot-titulo">Sua foto aqui</span><span class="slot-arquivo">img/maria-adm-sobre.jpg</span></div>
+        </div>
+        <div class="col-lg-7 stack-24 reveal">
+          <h2 class="t-heading-lg">Sobre o meu lado administrativo</h2>
+          <p class="t-subheading">Sou Técnica em Administração e gosto de transformar tarefas soltas em uma rotina clara, com responsabilidade e comprometimento.</p>
+          <p>Sou comunicativa, tenho facilidade para trabalhar em equipe, aprender coisas novas e buscar soluções para problemas. Tenho iniciativa, boa capacidade de adaptação e empatia.</p>
+          <p>Em paralelo, estudo Biomedicina. A atenção aos detalhes da ciência também faz parte da minha forma de organizar o trabalho.</p>
+          <div class="d-flex flex-wrap gap-3"><a class="btn btn-outline-secondary" href="#contato">Vamos conversar</a><button type="button" class="link-ghost link-botao" data-ir="bio"><svg class="icone" aria-hidden="true"><use href="#i-troca"/></svg>Ver meu lado biomédico</button></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="adm-formacao" class="section section--fog">
+    <div class="container">
+      <div class="reveal stack-16">
+        <h2 class="t-heading-lg">Formação e áreas de atuação</h2>
+        <p>Planejamento, processos e pessoas: a base de uma rotina administrativa que funciona.</p>
+      </div>
+      <div class="row g-4 mt-4">
+        <div class="col-lg-6 reveal">
+          <article class="card border-0 h-100">
+            <div class="instrumento instrumento--card" role="img" aria-label="Animação de um organograma com setores sendo destacados">
+              <svg viewBox="0 0 320 200" preserveAspectRatio="xMidYMid meet">
+                <path class="fluxo" d="M160 48V84H52V120M160 48V120M160 48V84H268V120"/>
+                <rect class="no" x="110" y="16" width="100" height="32" rx="12"/><rect class="barra-no" x="124" y="29" width="72" height="6" rx="6"/>
+                <rect class="no no--vez" style="--i:0" x="12" y="120" width="80" height="56" rx="12"/><rect class="barra-no" x="24" y="143" width="56" height="6" rx="6"/>
+                <rect class="no no--vez" style="--i:1" x="120" y="120" width="80" height="56" rx="12"/><rect class="barra-no" x="132" y="143" width="56" height="6" rx="6"/>
+                <rect class="no no--vez" style="--i:2" x="228" y="120" width="80" height="56" rx="12"/><rect class="barra-no" x="240" y="143" width="56" height="6" rx="6"/>
+              </svg>
+            </div>
+            <div class="d-flex align-items-center gap-2"><h3 class="t-heading-sm">Técnica em Administração</h3><span class="tag">Estudante</span></div>
+            <p class="t-body-sm preencher">Nome da instituição · Período</p>
+            <p>Organização, planejamento e processos que fazem o trabalho acontecer.</p>
+          </article>
+        </div>
+        <div class="col-lg-6 reveal">
+          <article class="card border-0 h-100">
+            <div class="instrumento instrumento--card planner" role="img" aria-label="Animação de uma lista de tarefas sendo concluída">
+              <ul aria-hidden="true">
+                <li style="--i:0"><span class="caixa"></span><span class="linha-t" style="width:72%"></span></li>
+                <li style="--i:1"><span class="caixa"></span><span class="linha-t" style="width:58%"></span></li>
+                <li style="--i:2"><span class="caixa"></span><span class="linha-t" style="width:80%"></span></li>
+                <li style="--i:3"><span class="caixa"></span><span class="linha-t" style="width:46%"></span></li>
+              </ul>
+            </div>
+            <h3 class="t-heading-sm">Áreas de atuação</h3>
+            <ul class="lista-simples">
+              <li>Planejamento e prazos</li>
+              <li>Comunicação e atendimento</li>
+              <li>Organização de documentos</li>
+              <li>Apoio ao trabalho em equipe</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="adm-metodo" class="section">
+    <div class="container">
+      <div class="reveal stack-16">
+        <h2 class="t-heading-lg">Meu método</h2>
+        <p>Na administração, o caminho é simples: planejar, organizar, executar e acompanhar.</p>
+      </div>
+      <div class="metodo-trilho mt-4" aria-hidden="true"><span class="metodo-progresso"></span></div>
+      <div class="row g-4 mt-1" id="adm-passos">
+        <div class="col-md-6 col-lg-3 reveal"><article class="card h-100 passo"><span class="tag">01</span><h3 class="t-subheading fw-600">Planejar</h3><p class="t-body-sm">Definir objetivos, prazos e quem faz o quê antes de começar.</p></article></div>
+        <div class="col-md-6 col-lg-3 reveal"><article class="card h-100 passo"><span class="tag">02</span><h3 class="t-subheading fw-600">Organizar</h3><p class="t-body-sm">Separar tarefas, documentos e prioridades de forma clara.</p></article></div>
+        <div class="col-md-6 col-lg-3 reveal"><article class="card h-100 passo"><span class="tag">03</span><h3 class="t-subheading fw-600">Executar</h3><p class="t-body-sm">Fazer com responsabilidade e comprometimento com o combinado.</p></article></div>
+        <div class="col-md-6 col-lg-3 reveal"><article class="card h-100 passo"><span class="tag">04</span><h3 class="t-subheading fw-600">Acompanhar</h3><p class="t-body-sm">Conferir o andamento, ajustar o que for preciso e aprender com o resultado.</p></article></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="adm-momentos" class="section section--fog">
+    <div class="container">
+      <div class="reveal stack-16">
+        <h2 class="t-heading-lg">Momentos</h2>
+        <p>Espaço para registros da sua trajetória administrativa: cursos, estágios, eventos e projetos.</p>
+      </div>
+      <div class="row g-4 mt-4">
+        <div class="col-md-4 reveal"><article class="article-card">
+          <div class="foto-slot foto-slot--16x9" data-foto="img/adm-momento-1.jpg" data-rotulo="Momento 1"><svg class="icone-grande" aria-hidden="true"><use href="#i-camera"/></svg><span class="slot-titulo">Sua foto aqui</span><span class="slot-arquivo">img/adm-momento-1.jpg</span></div>
+          <div class="article-card__body"><h3 class="t-subheading fw-600">Título do momento</h3><p>Descreva a foto em uma ou duas frases.</p></div></article></div>
+        <div class="col-md-4 reveal"><article class="article-card">
+          <div class="foto-slot foto-slot--16x9" data-foto="img/adm-momento-2.jpg" data-rotulo="Momento 2"><svg class="icone-grande" aria-hidden="true"><use href="#i-camera"/></svg><span class="slot-titulo">Sua foto aqui</span><span class="slot-arquivo">img/adm-momento-2.jpg</span></div>
+          <div class="article-card__body"><h3 class="t-subheading fw-600">Título do momento</h3><p>Descreva a foto em uma ou duas frases.</p></div></article></div>
+        <div class="col-md-4 reveal"><article class="article-card">
+          <div class="foto-slot foto-slot--16x9" data-foto="img/adm-momento-3.jpg" data-rotulo="Momento 3"><svg class="icone-grande" aria-hidden="true"><use href="#i-camera"/></svg><span class="slot-titulo">Sua foto aqui</span><span class="slot-arquivo">img/adm-momento-3.jpg</span></div>
+          <div class="article-card__body"><h3 class="t-subheading fw-600">Título do momento</h3><p>Descreva a foto em uma ou duas frases.</p></div></article></div>
+      </div>
+    </div>
+  </section>
+
+  </div>
+
+  <!-- Contato -->
+  <section id="contato" class="section">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-5 stack-24 reveal">
+          <h2 class="t-heading-lg">Vamos conversar</h2>
+          <p class="t-subheading">Se você tem uma oportunidade ou quer saber mais sobre meu perfil, escreva uma mensagem.</p>
+          <div class="stack-8">
+            <a class="link-ghost" data-config="email" href="#"><svg class="icone" aria-hidden="true"><use href="#i-seta"/></svg><span>seuemail@exemplo.com</span></a>
+            <a class="link-ghost" data-config="linkedin" href="#" target="_blank" rel="noopener"><svg class="icone" aria-hidden="true"><use href="#i-seta"/></svg><span>LinkedIn</span></a>
+            <a class="link-ghost" data-config="instagram" href="#" target="_blank" rel="noopener"><svg class="icone" aria-hidden="true"><use href="#i-seta"/></svg><span>Instagram</span></a>
+            <a class="link-ghost" data-config="whatsapp" href="#" target="_blank" rel="noopener"><svg class="icone" aria-hidden="true"><use href="#i-seta"/></svg><span>WhatsApp</span></a>
+          </div>
+        </div>
+        <div class="col-lg-7 reveal">
+          <form id="form-contato" class="card needs-validation" novalidate>
+            <div><label class="form-label" for="nome">Nome</label><input class="form-control" id="nome" type="text" required minlength="2" autocomplete="name" placeholder="Seu nome"><div class="invalid-feedback">Informe seu nome.</div></div>
+            <div><label class="form-label" for="email">E-mail</label><input class="form-control" id="email" type="email" required autocomplete="email" placeholder="voce@exemplo.com"><div class="invalid-feedback">Informe um e-mail válido.</div></div>
+            <div><label class="form-label" for="mensagem">Mensagem</label><textarea class="form-control" id="mensagem" rows="5" required minlength="10" placeholder="Escreva sua mensagem"></textarea><div class="invalid-feedback">Escreva pelo menos 10 caracteres.</div></div>
+            <div><button class="btn btn-primary btn--lg" type="submit">Enviar mensagem</button></div>
+            <p class="t-caption" id="form-aviso">O botão abre o seu aplicativo de e-mail com a mensagem pronta.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer on-dark">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-5"><p class="rodape-marca">Maria Vitória</p><p class="rodape-texto">Estudante de Biomedicina e Técnica em Administração.</p></div>
+      <div class="col-6 col-lg-3"><h4>Navegação</h4><span data-so="bio"><a href="#sobre">Sobre</a><a href="#formacao">Formação</a><a href="#metodo">Método</a><a href="#momentos">Momentos</a></span><span data-so="adm"><a href="#adm-sobre">Sobre</a><a href="#adm-formacao">Formação</a><a href="#adm-metodo">Método</a><a href="#adm-momentos">Momentos</a></span></div>
+      <div class="col-6 col-lg-4"><h4>Contato</h4><a href="#contato">Enviar mensagem</a><a data-config="linkedin" href="#" target="_blank" rel="noopener">LinkedIn</a><a data-config="instagram" href="#" target="_blank" rel="noopener">Instagram</a></div>
+    </div>
+    <p class="rodape-copy">&copy; <span id="ano">2026</span> Maria Vitória. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<div class="transicao" aria-hidden="true"><span id="transicao-rotulo"></span></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
