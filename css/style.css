@@ -8,7 +8,7 @@
 .video-fundo::after { content: ""; position: absolute; inset: 0; background: rgba(255, 255, 255, 0.9); }
 
 /* Faixas Fog continuam translúcidas para deixar o vídeo aparecer */
-.section--fog { background: rgba(0, 0, 0, 0); }
+.section--fog { background: rgba(0, 0, 0, 0,3); }
 
 /* Topo */
 .topo { background: var(--color-paper); border-bottom: 1px solid transparent; transition: border-color .2s ease-out; z-index: 1030; }
