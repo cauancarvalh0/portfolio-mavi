@@ -2,39 +2,33 @@
    Regras do Brex Design System: só tokens, sem sombras, raios 12px/6px, Ember só em ação primária. */
 
 
-/* Vídeo de fundo sem transparência */
+
+/* Vídeo mais transparente */
 .video-fundo {
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  opacity: 1;
-  pointer-events: none;
+  opacity: 0.4;
+  transition: opacity 0.6s ease-out;
 }
 
-
-/* Fundo suave para melhorar a leitura dos textos */
-.hero h1,
-.hero p,
-.section--fog h2,
-.section--fog p {
-  background: rgba(255, 255, 255, 0.75);
-  padding: 4px 8px;
-  border-radius: 6px;
+.video-fundo.ativo {
+  opacity: 0.4;
 }
 
-
+/* Camada branca suave sobre o vídeo */
 .video-fundo::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
   pointer-events: none;
 }
 
+/* Fundo dos textos para facilitar a leitura */
+.texto-destaque {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 8px 12px;
+  border-radius: 6px;
+}
 
-/* Remove a camada branca que deixa o vídeo esbranquiçado */
-.video-fundo::after {
-  content: none;
 }
 
 /* Faixas Fog continuam translúcidas para deixar o vídeo aparecer */
