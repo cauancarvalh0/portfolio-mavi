@@ -7,16 +7,16 @@
    ===================================================================== */
 
 :root {
-  /* ----- AZUL BEBÊ (ativo) ----- */
-  --color-ember: #89cff0;          /* cor dos botões */
-  --color-destaque-texto: #2b78ad; /* versão escura, para textos e linhas sobre fundo branco */
+  /* ----- AZUL BEBÊ (ativo) -----
+  --color-ember: #89cff0;          /* cor dos botões 
+  --color-destaque-texto: #2b78ad; /* versão escura, para textos e linhas sobre fundo branco 
   --color-admin: #1f3a5f;          /* fundo do lado administrativo */
 
-  /* ----- ROSA BEBÊ -----
+  /* ----- ROSA BEBÊ ----- */
   --color-ember: #f4c2d7;
   --color-destaque-texto: #b13d72;
   --color-admin: #5a2a45;
-  */
+  
 
   /* ----- VERDE BEBÊ -----
   --color-ember: #b5e8c3;
