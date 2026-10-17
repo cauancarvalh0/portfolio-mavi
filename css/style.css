@@ -12,6 +12,17 @@
 }
 
 
+/* Fundo suave para melhorar a leitura dos textos */
+.hero h1,
+.hero p,
+.section--fog h2,
+.section--fog p {
+  background: rgba(255, 255, 255, 0.75);
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+
 .video-fundo::after {
   content: "";
   position: absolute;
