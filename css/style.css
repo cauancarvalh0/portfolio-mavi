@@ -1,11 +1,27 @@
 /* Portfólio Maria Vitória: camada do projeto sobre brex.css e bootstrap-overrides.css.
    Regras do Brex Design System: só tokens, sem sombras, raios 12px/6px, Ember só em ação primária. */
 
-/* Vídeo de fundo (aparece só quando existe video/fundo.mp4) */
-.video-fundo { position: fixed; inset: 0; z-index: -1; opacity: 0; transition: opacity .6s ease-out; pointer-events: none; }
-.video-fundo.ativo { opacity: 1; }
-.video-fundo video { width: 100%; height: 100%; object-fit: cover; display: block; }
-.video-fundo::after { content: ""; position: absolute; inset: 0; background: rgba(255, 255, 255, 0.9); }
+
+/* Vídeo de fundo sem transparência */
+.video-fundo {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.video-fundo video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Remove a camada branca que deixa o vídeo esbranquiçado */
+.video-fundo::after {
+  content: none;
+}
 
 /* Faixas Fog continuam translúcidas para deixar o vídeo aparecer */
 .section--fog { background: rgba(0, 0, 0, 0.3); }
