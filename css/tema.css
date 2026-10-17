@@ -1,0 +1,41 @@
+/* =====================================================================
+   TEMA DE CORES: este é o único arquivo que você precisa editar para
+   trocar as cores do site.
+
+   Como escolher: deixe ATIVO só um bloco (o de baixo vence).
+   Para trocar, copie as 3 linhas de outro bloco para o :root ativo.
+   ===================================================================== */
+
+:root {
+  /* ----- AZUL BEBÊ (ativo) ----- */
+  --color-ember: #89cff0;          /* cor dos botões */
+  --color-destaque-texto: #2b78ad; /* versão escura, para textos e linhas sobre fundo branco */
+  --color-admin: #1f3a5f;          /* fundo do lado administrativo */
+
+  /* ----- ROSA BEBÊ -----
+  --color-ember: #f4c2d7;
+  --color-destaque-texto: #b13d72;
+  --color-admin: #5a2a45;
+  */
+
+  /* ----- VERDE BEBÊ -----
+  --color-ember: #b5e8c3;
+  --color-destaque-texto: #2c7a4b;
+  --color-admin: #1f4d3a;
+  */
+}
+
+/* ---- Ajustes para cor clara: texto escuro nos botões ---- */
+.btn-primary { --bs-btn-color: var(--color-ink); --bs-btn-hover-color: var(--color-ink); --bs-btn-active-color: var(--color-ink); }
+.btn--ember { color: var(--color-ink); }
+
+/* ---- Cor de destaque em textos e linhas sobre fundo claro ---- */
+.card--active h3, .link-standalone { color: var(--color-destaque-texto); }
+.text-primary { color: var(--color-destaque-texto) !important; }
+.nav-link.active { text-decoration-color: var(--color-destaque-texto); }
+.link-ghost svg { color: var(--color-destaque-texto); }
+
+/* ---- Lado administrativo: fundo colorido no lugar do preto ---- */
+.hero--escuro.section--abyss { background: var(--color-admin); }
+.hero--escuro .link-ghost svg { color: var(--color-ember); }
+.announce a { color: var(--color-ember); }
