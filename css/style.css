@@ -3,7 +3,7 @@
 
 /* Vídeo de fundo (aparece só quando existe video/fundo.mp4) */
 .video-fundo { position: fixed; inset: 0; z-index: -1; opacity: 0; transition: opacity .6s ease-out; pointer-events: none; }
-.video-fundo.ativo { opacity: 1; }
+.video-fundo.ativo { opacity: 2; }
 .video-fundo video { width: 100%; height: 100%; object-fit: cover; display: block; }
 .video-fundo::after { content: ""; position: absolute; inset: 0; background: rgba(255, 255, 255, 0.9); }
 
