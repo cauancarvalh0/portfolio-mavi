@@ -12,17 +12,17 @@
   --color-destaque-texto: #2b78ad; /* versão escura, para textos e linhas sobre fundo branco 
   --color-admin: #1f3a5f;          /* fundo do lado administrativo */
 
-  /* ----- ROSA BEBÊ ----- */
+  /* ----- ROSA BEBÊ -----
   --color-ember: #f4c2d7;
   --color-destaque-texto: #b13d72;
-  --color-admin: #5a2a45;
+  --color-admin: #5a2a45;*/
   
 
-  /* ----- VERDE BEBÊ -----
+  /* ----- VERDE BEBÊ -----*/
   --color-ember: #b5e8c3;
   --color-destaque-texto: #2c7a4b;
   --color-admin: #1f4d3a;
-  */
+ 
 }
 
 /* ---- Ajustes para cor clara: texto escuro nos botões ---- */
